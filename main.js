@@ -25,11 +25,18 @@ createApp({
 
             ],
             ciao:true
+            
         }
 
     },
     methods:{
-        
+        changeCheck(index){
+            console.log(this.todoItems[index].check)
+            this.todoItems[index].check = !this.todoItems[index].check
+            console.log(this.todoItems[index].check)
+
+        }
+
 
     }
 

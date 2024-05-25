@@ -55,3 +55,7 @@ body {
 .lista li{
     padding: 5px;
 }
+
+.lista .done{
+    text-decoration: line-through;
+}

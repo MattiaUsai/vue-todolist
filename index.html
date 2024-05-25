@@ -18,9 +18,7 @@
             </div>
             <div class="row">
                 <ul class="lista">
-                    <li>fare la spesa</li>
-                    <li>portare in giro il cane</li>
-                    <li>finire la todolist</li>
+                    <li  v-for="(item,index) in todoItems" :class="{done : item.check }" @click="changeCheck(index) "    >{{item.text}}</li>
                 </ul>
             </div>
 
