@@ -6,19 +6,19 @@ createApp({
         return{
             todoItems:[
                 {
-                    text:'fare la spesa',
+                    text:'Fare la spesa',
                     check:false
                 },
                 {
-                    text:'portare in giro il cane',
+                    text:'Portare in giro il cane',
                     check:false
                 },
                 {
-                    text:"finire l'esercizio todolist",
+                    text:"Finire l'esercizio todolist",
                     check:false
                 },
                 {
-                    text:'andare a scalare',
+                    text:'Andare a scalare',
                     check:false
                 }
                 
@@ -34,6 +34,10 @@ createApp({
             console.log(this.todoItems[index].check)
             this.todoItems[index].check = !this.todoItems[index].check
             console.log(this.todoItems[index].check)
+        },
+
+        deleteItems(i){
+           this.todoItems = this.todoItems.filter((_,index)   =>  index !== i)
 
         }
 

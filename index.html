@@ -18,7 +18,13 @@
             </div>
             <div class="row">
                 <ul class="lista">
-                    <li  v-for="(item,index) in todoItems" :class="{done : item.check }" @click="changeCheck(index) "    >{{item.text}}</li>
+                    <li 
+                     v-for="(item,index) in todoItems" 
+                     :class="{done : item.check }" 
+                     @click="changeCheck(index) "    >
+                        {{item.text}}    
+                        <button class="delete" @click="deleteItems(index)">&cross;</button>
+                    </li>
                 </ul>
             </div>
 
