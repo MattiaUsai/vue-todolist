@@ -9,6 +9,8 @@
 <body>
     <div id="app">
         <div class="header">
+            <h1>TodoList</h1>
+            <h4>Mattia Usai</h4>
 
         </div>
         <div class="container">
@@ -19,11 +21,9 @@
             </div>
             <div class="row">
                 <ul class="lista">
-                    <li 
-                     v-for="(item,index) in filterTask()" 
-                     :class="{done : item.check }" 
-                     @click="item.check = !item.check"    >
-                        {{item.text}}    
+                    <li  v-for="(item,index) in filterTask()" :class="{done : item.check }" >
+                        <span  
+                        @click="item.check = !item.check">{{item.text}} </span>   
                         <button class="delete" @click="deleteItems(index)">&cross;</button>
                     </li>
                 </ul>

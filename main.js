@@ -33,10 +33,7 @@ createApp({
 
     },
     methods:{
-        changeCheck(index){
-            this.todoItems[index].check = !this.todoItems[index].check
-        },
-
+        
         deleteItems(i){
            this.todoItems = this.todoItems.filter((_,index)   =>  index !== i)
 
@@ -49,13 +46,6 @@ createApp({
                 text:this.findTask,
                 check:false
             }
-
-
-
-
-
-
-
             this.todoItems.push(newItem)
 
 
