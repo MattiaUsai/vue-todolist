@@ -13,19 +13,25 @@
         </div>
         <div class="container">
             <div class="row row-button">
-                <button>Add Task</button>
-                <button>Add list</button>
+                
+                <input type="text" placeholder="Cerca una task" v-model="findTask">
+                
             </div>
             <div class="row">
                 <ul class="lista">
                     <li 
-                     v-for="(item,index) in todoItems" 
+                     v-for="(item,index) in filterTask()" 
                      :class="{done : item.check }" 
-                     @click="changeCheck(index) "    >
+                     @click="item.check = !item.check"    >
                         {{item.text}}    
                         <button class="delete" @click="deleteItems(index)">&cross;</button>
                     </li>
                 </ul>
+                <div class="newtaskquestion" v-show="addTaskQuestion">
+                    <h1>Vuoi aggiungere la nuova task?</h1>
+                    <button @click="addTask">Add Task</button>
+                    <h3>Clicca sul bottone per aggiungere la nuova task</h3>
+                </div>
             </div>
 
         </div>
